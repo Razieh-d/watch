@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>watch</title>
+    <link rel="stylesheet" href="./CSS/styles.css" />
+  </head>
+  <body>
+    <div class="continer">
+      <h1 id="timer"></h1>
+      <script>
+        let timerTag = document.getElementById("timer");
+        function updateTime() {
+          const now = new Date().toLocaleTimeString("fa-IR", { hour12: false });
+          timerTag.textContent = now;
+        }
+        setInterval(updateTime, 1000);
+      </script>
+    </div>
+  </body>
+</html>
